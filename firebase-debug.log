@@ -1,0 +1,46 @@
+[debug] [2021-10-10T05:54:55.097Z] ----------------------------------------------------------------------
+[debug] [2021-10-10T05:54:55.114Z] Command:       /usr/bin/node /usr/local/bin/firebase emulators:start
+[debug] [2021-10-10T05:54:55.117Z] CLI Version:   9.16.0
+[debug] [2021-10-10T05:54:55.118Z] Platform:      linux
+[debug] [2021-10-10T05:54:55.118Z] Node Version:  v12.21.0
+[debug] [2021-10-10T05:54:55.175Z] Time:          Sun Oct 10 2021 11:24:55 GMT+0530 (India Standard Time)
+[debug] [2021-10-10T05:54:55.176Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-10-10T05:54:55.454Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-10-10T05:54:55.455Z] > authorizing via signed-in user (arunamirtha98@gmail.com)
+[info] i  emulators: Starting emulators: hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: hosting"}}
+[debug] [2021-10-10T05:54:55.492Z] [hub] writing locator at /tmp/hub-arunblog123.json
+[debug] [2021-10-10T05:54:55.563Z] > refreshing access token with scopes: []
+[debug] [2021-10-10T05:54:55.565Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-10T05:54:55.953Z] <<< HTTP RESPONSE 200 {"date":"Sun, 10 Oct 2021 05:54:55 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-10T05:54:56.257Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/arunblog123/sites 
+[debug] [2021-10-10T05:54:57.985Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/arunblog123/sites 200
+[debug] [2021-10-10T05:54:57.986Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/arunblog123/sites {"sites":[{"name":"projects/267192436318/sites/arunblog123","defaultUrl":"https://arunblog123.web.app","appId":"1:267192436318:web:b5deb50a371efaf2a656cf","type":"DEFAULT_SITE"}]}
+[debug] [2021-10-10T05:54:57.988Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/arunblog123/webApps/1:267192436318:web:b5deb50a371efaf2a656cf/config [none]
+[debug] [2021-10-10T05:54:59.660Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/arunblog123/webApps/1:267192436318:web:b5deb50a371efaf2a656cf/config 200
+[debug] [2021-10-10T05:54:59.662Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/arunblog123/webApps/1:267192436318:web:b5deb50a371efaf2a656cf/config {"projectId":"arunblog123","appId":"1:267192436318:web:b5deb50a371efaf2a656cf","storageBucket":"arunblog123.appspot.com","apiKey":"AIzaSyDj25zebtvZe4sbiwOPLhrH4842id6tQSg","authDomain":"arunblog123.firebaseapp.com","messagingSenderId":"267192436318"}
+[info] i  hosting: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] ✔  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[warn] ⚠  emulators: The Emulator UI requires a project ID to start. Configure your default project with 'firebase use' or pass the --project flag. {"metadata":{"emulator":{"name":"hub"},"message":"The Emulator UI requires a project ID to start. Configure your default project with 'firebase use' or pass the --project flag."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+└─────────────────────────────────────────────────────────────┘
+
+┌──────────┬────────────────┐
+│ Emulator │ Host:Port      │
+├──────────┼────────────────┤
+│ Hosting  │ localhost:5000 │
+└──────────┴────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: None
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[info] i  hosting: 127.0.0.1 - - [10/Oct/2021:05:56:46 +0000] "GET / HTTP/1.1" 200 3010 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [10/Oct/2021:05:56:46 +0000] \"GET / HTTP/1.1\" 200 3010 \"-\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0\""}}
+[info] i  hosting: 127.0.0.1 - - [10/Oct/2021:05:56:47 +0000] "GET /static/js/2.8461d6d0.chunk.js HTTP/1.1" 200 169655 "http://localhost:5000/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [10/Oct/2021:05:56:47 +0000] \"GET /static/js/2.8461d6d0.chunk.js HTTP/1.1\" 200 169655 \"http://localhost:5000/\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0\""}}
+[info] i  hosting: 127.0.0.1 - - [10/Oct/2021:05:56:47 +0000] "GET /static/js/main.6b1e103f.chunk.js HTTP/1.1" 200 9094 "http://localhost:5000/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [10/Oct/2021:05:56:47 +0000] \"GET /static/js/main.6b1e103f.chunk.js HTTP/1.1\" 200 9094 \"http://localhost:5000/\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0\""}}
+[info] i  hosting: 127.0.0.1 - - [10/Oct/2021:05:56:47 +0000] "GET /static/css/main.7e65e5bc.chunk.css HTTP/1.1" 200 1850 "http://localhost:5000/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [10/Oct/2021:05:56:47 +0000] \"GET /static/css/main.7e65e5bc.chunk.css HTTP/1.1\" 200 1850 \"http://localhost:5000/\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0\""}}
+[info] i  hosting: 127.0.0.1 - - [10/Oct/2021:05:56:47 +0000] "GET /favicon.ico HTTP/1.1" 200 3870 "http://localhost:5000/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [10/Oct/2021:05:56:47 +0000] \"GET /favicon.ico HTTP/1.1\" 200 3870 \"http://localhost:5000/\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0\""}}
+[info] i  hosting: 127.0.0.1 - - [10/Oct/2021:05:56:47 +0000] "GET /logo192.png HTTP/1.1" 200 5347 "http://localhost:5000/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [10/Oct/2021:05:56:47 +0000] \"GET /logo192.png HTTP/1.1\" 200 5347 \"http://localhost:5000/\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0\""}}

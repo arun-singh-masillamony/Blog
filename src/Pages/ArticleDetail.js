@@ -7,7 +7,7 @@ const ArticleDetail = ({ match }) => {
     const name =match.params.name;
     const [articleInfo,setArticleInfo] =useState({ upvote :0, comments :[]});
     useEffect(()=>{
-        setArticleInfo({});
+        setArticleInfo({ upvote :Article.upvotes, comments :[]});
     },[name])
     
     const Article=Articles.find((Article1)=>{
@@ -21,6 +21,7 @@ const ArticleDetail = ({ match }) => {
     <h1>{Article.name} </h1>
     <h3>{Article.title}</h3>
     <p> this post has been upvoted {articleInfo.upvote} times</p>
+    <button onClick={()=>setArticleInfo({upvote : articleInfo.upvote+1})} >Upvotes</button>
     {Article.content.map((para, key)=>(
        <p key={key}>{para}</p>
     ))

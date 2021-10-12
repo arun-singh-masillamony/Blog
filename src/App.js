@@ -10,6 +10,7 @@ import AboutPage from './Pages/AboutPage';
 import ArticlePage from './Pages/ArticlePage';
 import ArticleDetail from './Pages/ArticleDetail';
 import  NotFoundPage from './Pages/NotFoundPage';
+import Login from './Pages/Login'
 import NavBar from './NavBar'
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/about" component={AboutPage}/> 
           <Route path="/article" component={ArticlePage} exact/> 
           <Route path="/article/:name" component={ArticleDetail}/> 
+          <Route path="/login" component={Login}/> 
           <Route component={NotFoundPage}/>      
         </Switch>  
     </div>

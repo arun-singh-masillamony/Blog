@@ -1,8 +1,25 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import app from "../Firebase.js"
+const auth = getAuth();
 
-const HomePage = () => (
+const HomePage = () => {
+    const [User, setUser] = useState("");
+
+    useEffect(()=>{
+        onAuthStateChanged(auth,(user)=>{
+            if(user){
+                setUser(user)
+            }
+            else{
+
+            }
+        })
+    },[User])
+
+    return(
     <>
-        <h1>welcome to my blog</h1>
+        <h1>welcome to my blog {User.email}</h1>
         <p>
                 const str = 'JavaScript is amazing';
 
@@ -31,6 +48,7 @@ const HomePage = () => (
              ZSo;hg LJHDsglk jlkz js
         </p>
     </>
-);
+    )
+    };
 
 export default HomePage;
