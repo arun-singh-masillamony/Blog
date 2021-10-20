@@ -2,7 +2,6 @@ import React, { useState  } from 'react'
 import { useHistory } from "react-router-dom";
 import "../style/Login.css";
 import { getAuth, createUserWithEmailAndPassword ,signInWithEmailAndPassword} from "firebase/auth";
-import app from "../Firebase.js"
 function Login() {
     const history = useHistory();
     const [email,setemail]= useState("");
@@ -18,7 +17,6 @@ function Login() {
         history.push("/");
         })
         .catch((error) => {
-            const errorCode = error.code;
             const errorMessage = error.message;
             alert(errorMessage);
         });

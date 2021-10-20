@@ -1,7 +1,6 @@
 import {Link} from 'react-router-dom'
-import React,{useEffect, useState,useHistory} from 'react';
+import React,{useEffect, useState} from 'react';
 import { getAuth, onAuthStateChanged ,signOut} from "firebase/auth";
-import app from "./Firebase.js"
 
 const auth = getAuth();
 const NavBar= () => {

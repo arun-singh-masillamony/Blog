@@ -1,7 +1,8 @@
 import React,{useEffect, useState} from 'react';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import app from "../Firebase.js"
+import 'firebase/compat/auth';
 const auth = getAuth();
+
 
 const HomePage = () => {
     const [User, setUser] = useState("");
