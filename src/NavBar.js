@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom'
 import React,{useEffect, useState} from 'react';
 import { getAuth, onAuthStateChanged ,signOut} from "firebase/auth";
-
+import app from './Firebase';
 const auth = getAuth();
 const NavBar= () => {
     const [User, setUser] = useState(null);
