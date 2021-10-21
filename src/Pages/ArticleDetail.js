@@ -3,7 +3,7 @@ import { getDatabase, ref, child, get ,update} from "firebase/database";
 import Firebase from 'firebase/compat/app';
 import 'firebase/compat/database';
 import Loader from './Loader';
-import app from '../Firebase';
+//import app from '../Firebase';
 
 
 const ArticleDetail = ({ match }) => {

@@ -3,7 +3,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import 'firebase/compat/auth';
 import app from '../Firebase';
 
-const auth = getAuth();
+const auth = getAuth(app);
 
 
 const HomePage = () => {
