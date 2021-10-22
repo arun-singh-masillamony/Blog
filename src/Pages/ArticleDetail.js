@@ -3,6 +3,7 @@ import { getDatabase, ref, child, get ,update} from "firebase/database";
 import Firebase from 'firebase/compat/app';
 import 'firebase/compat/database';
 import Loader from './Loader';
+import OtherArticle from '../OtherArticle';
 //import app from '../Firebase';
 
 
@@ -11,6 +12,7 @@ const ArticleDetail = ({ match }) => {
     const [upvote,setUpvote] =useState("");
     const [content,setContent] =useState([]);
     const [Articles,setArticles] =useState({});
+    const [otherArticle,setotherArticle] =useState({});
     const [Loading,setLoading]=useState(true);
 
     function updateUpvote() {
@@ -31,6 +33,7 @@ const ArticleDetail = ({ match }) => {
 
     useEffect(()=>{
         const dbRef = ref(getDatabase());
+        //get the required article
         get(child(dbRef, `articles/${Name}`))
         .then((snapshot) => {
         if (snapshot.exists()) {
@@ -44,9 +47,23 @@ const ArticleDetail = ({ match }) => {
             console.log("No data available");
         }
         }).catch((error) => {
+        console.error(error); 
+    });
+
+    //get the other articles
+    get(child(dbRef, `articles`))
+        .then((snapshot) => {
+        if (snapshot.exists()) {
+            console.log(snapshot.val());
+            const articles1 =snapshot.val();
+            setotherArticle(articles1);
+            setLoading(false)
+        } else {
+            console.log("No data available");
+        }
+        }).catch((error) => {
         console.error(error);
-        
-});
+    });
     },[upvote,Name])
 
 if (Loading) return <Loader />;
@@ -56,10 +73,13 @@ if (Loading) return <Loader />;
     <h3>{Articles.title}</h3>
     <p> this post has been upvoted {Articles.upvotes} times</p>
     <button onClick={updateUpvote} >Upvotes</button>  
+    {console.log(content)}
     {content.map((para, key)=>(
        <p key={key}>{para}</p>
     ))
     }
+    <br/>
+    {content && <OtherArticle articles={otherArticle} available={Articles} heading='Other Articles' />}
     </>
     );
 }

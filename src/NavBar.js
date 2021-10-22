@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom'
 import React,{useEffect, useState} from 'react';
 import { getAuth, onAuthStateChanged ,signOut} from "firebase/auth";
-
+import './NavBar.css';
 //import app from './Firebase';
 const auth = getAuth();
 const NavBar= () => {
@@ -13,6 +13,7 @@ const NavBar= () => {
                 console.log('i am at useEffect')
             }
             else{
+                setUser(null)
                 console.log('i am at useEffect but inside the else command')
             }
         })
@@ -29,11 +30,11 @@ const NavBar= () => {
     }
     return(
     <nav>
-        <ul>
-            <li>
+        <ul className="NavBarContainer">
+            <li className="NavBar">
             {console.log('i am at the start of the code')}
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
+            <Link className="NavBarItem" to="/">Home</Link>
+            {User?<Link to="/about">Add</Link>:<Link to="/about">About</Link>}
             <Link to="/article">Article</Link>
             {User && <Link to="/" onClick={OnsignOut} >SignOut</Link>}
             {!User && <Link to="/login">Login</Link>}
